@@ -1,3 +1,625 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joseph</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+  <div class="desktop" id="desktop">
+
+    <!-- Desktop folder icons — scattered (wrapper for mobile grid) -->
+    <div class="folders">
+      <button class="folder" data-window="experience" style="top: 40px; left: 60px;">
+        <img class="folder-icon" src="iconset/orange.iconset/icon_128x128.png" alt="" draggable="false">
+        <span class="folder-label">Experience</span>
+      </button>
+
+      <button class="folder" data-window="education" style="top: 200px; left: 80px;">
+        <img class="folder-icon" src="iconset/violet.iconset/icon_128x128.png" alt="" draggable="false">
+        <span class="folder-label">Education</span>
+      </button>
+
+      <button class="folder" data-window="learning" style="bottom: 140px; left: 50px;">
+        <img class="folder-icon" src="iconset/green.iconset/icon_128x128.png" alt="" draggable="false">
+        <span class="folder-label">Learning</span>
+      </button>
+
+      <button class="folder" data-window="projects" style="bottom: 50px; right: 80px;">
+        <img class="folder-icon" src="iconset/aqua.iconset/icon_128x128.png" alt="" draggable="false">
+        <span class="folder-label">Projects</span>
+      </button>
+
+      <button class="folder" data-window="resume" style="top: 50px; right: 60px;">
+        <img class="folder-icon" src="iconset/red.iconset/icon_128x128.png" alt="" draggable="false">
+        <span class="folder-label">Resume</span>
+      </button>
+    </div>
+
+    <!-- Photo window — visible on load -->
+    <div class="window is-visible" id="window-photo">
+      <div class="window-header">
+        <span class="window-title">photo.jpg</span>
+        <!-- <button class="window-close" aria-label="Close">X</button> -->
+      </div>
+      <div class="window-content window-content--photo">
+        <img src="assets/me-three.png" alt="Photo of Joseph">
+      </div>
+    </div>
+
+    <!-- About window — visible on load -->
+    <div class="window is-visible" id="window-about">
+      <div class="window-header">
+        <span class="window-title">about.txt</span>
+        <!-- <button class="window-close" aria-label="Close">X</button> -->         </div>
+      <div class="window-content window-content--about">
+        <p>Hello! I’m Joseph, a researcher / programmer / student.</p>
+        <br>
+        <p>I am currently serving as an information security specialist in the Cyber Operational Group, Air Force for my mandatory military service in Korea.</p>
+        <br>
+        <p>I am interested in educational interactions between man & machine and technologies to improve learning outcomes.</p>
+      </div>
+    </div>
+
+    <!-- Folder windows — hidden until clicked -->
+    <div class="window" id="window-experience" style="display: none;">
+      <div class="window-header">
+        <span class="window-title">Experience</span>
+        <button class="window-close" aria-label="Close">X</button>
+      </div>
+      <div class="tabs">
+        <button class="tab is-active" data-tab="work">Work</button>
+        <button class="tab" data-tab="research">Research</button>
+      </div>
+      <div class="window-content" id="tab-work">
+        <div class="entry">
+          <div class="entry-img">
+            <img src="assets/rokaf.png" alt="ROKAF LOGO">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">Oct. 2024 &ndash; Present</div>
+            <div class="entry-role">Information Security Specialist</div>
+            <div class="entry-place">Republic of Korea Air Force</div>
+            <ul class="entry-list">
+              <li class="entry-desc">Monitoring external and internal network activity in headquarters of Korean Air Force.</li>
+              <li class="entry-desc">Provide timely solutions to security breaches and system vulnerabilities.</li>
+              <li class="entry-desc">Develop automated tools for routine checks for firewall and antivirus software, reducing manual workload.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-img">
+            <img src="assets/haverford.png" alt="haverford logo">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">Aug. 2022 &ndash; Jan. 2024</div>
+            <div class="entry-role">Teaching Assistant & Lab Monitor</div>
+            <div class="entry-place">Haverford College & Bryn Mawr College</div>
+            <ul class="entry-list">
+              <li class="entry-desc">
+                <a href="http://www.cs.haverford.edu/courses/cmsc105/">CMSC 105 (Intro to CS)</a>, 
+                <a href="https://cs.brynmawr.edu/Courses/cs231/fall2022/">CMSC 231 (Discrete Maths)</a> </li>
+              <li class="entry-desc">Provided individual support during lectures, held weekly office hours, and graded homework.</li>
+              <li class="entry-desc">Resolved technological difficulties and helped debug Python and Java code for 40+ students.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-img">
+            <img src="assets/phebe.jpeg" alt="phebe logo">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">Oct 2021. &ndash; Jan. 2024</div>
+            <div class="entry-role">Classroom Aide</div>
+            <div class="entry-place">Phebe Anna Thorne School</div>
+            <ul class="entry-list">
+              <li class="entry-desc">Supported in teaching Mathematics and English to 16 kindergarten students.</li>
+              <li class="entry-desc">Facilitated learning and engagement through various activities including sports, arts, and reading.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="window-content" id="tab-research" style="display: none;">
+
+        <div class="entry">
+          <div class="entry-img">
+            <img src="assets/yonsei-aied.png" alt="AIEd Lab logo">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">Mar. 2024 &ndash; Sept. 2024</div>
+            <div class="entry-role">Undergraduate Research Intern</div>
+            <div class="entry-place">AIEd Lab, Yonsei University</div>
+            <ul class="entry-list">
+              <li class="entry-desc">Worked under the guidance of Professor <a href="https://aiedlab.yonsei.ac.kr/about/">Nam Ju Kim</a>.</li>
+              <li class="entry-desc">Contributed to a research project on scaffolding approaches to visual-auditory substitution learning .</li>
+              <li class="entry-desc">Led the development of an AI program to improve student attention in recorded lectures.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-img">
+            <img src="assets/sigcse.jpeg" alt="sigcse Logo">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">May 2023 &ndash; Nov. 2023</div>
+            <div class="entry-role">Lead Student Researcher</div>
+            <div class="entry-place">Summer Science Research, Bryn Mawr College</div>
+            <ul class="entry-list">
+              <li class="entry-desc">Investigated the impact of various deadline policies on student learning and belonging in CS courses
+                 under the guidance of Professor <a href="https://www.cs.columbia.edu/~cmurphy/">Chris Murphy</a>.</li>
+              <li class="entry-desc">Reviewed relevant literature, designed survey, and analyzed data from 50+ participants.</li>
+              <li class="entry-desc">First author of a peer-reviewed paper presented at the 2024 ACM SIGCSE Technical Symposium.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-img">
+            <img src="assets/haverford.png" alt="sigcse Logo">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">Jan. 2023 &ndash; Aug. 2023</div>
+            <div class="entry-role">NLP Research Engineer</div>
+            <div class="entry-place">Grissom Lab, Haverford College</div>
+            <ul class="entry-list">
+              <li class="entry-desc">Explored the impact of word order for transformer-based Machine Translation models
+                 under the guidance of Professor <a href="https://agrissom.sites.haverford.edu/">Alvin Grissom II</a>.</li>
+              <li class="entry-desc">Collected and cleaned Korean-English corpus of more than 1M+ lines for training.</li>
+              <li class="entry-desc">Compared the accuracy with different languages and generated plots to represent key findings.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="window" id="window-education" style="display: none;">
+      <div class="window-header">
+        <span class="window-title">Education</span>
+        <button class="window-close" aria-label="Close">X</button>
+      </div>
+      <div class="window-content">
+        <div class="entry">
+          <div class="entry-img">
+            <img src="assets/haverford.png" alt="haverford logo">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">2021 &ndash; 2027</div>
+            <div class="entry-role">B.S. Computer Science</div>
+            <div class="entry-place">Haverford College</div>
+            <ul class="entry-list">
+              <li class="entry-desc">GPA: 4.0</li>
+              <li class="entry-desc">Took a 2 year gap year for mandatory military service in Korea.</li>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-img">
+            <img src="assets/yonsei.png" alt="yonsei logo">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">2024</div>
+            <div class="entry-role">Study Abroad Semester</div>
+            <div class="entry-place">Yonsei University</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="window-learning" style="display: none;">
+      <div class="window-header">
+        <span class="window-title">Learning</span>
+        <button class="window-close" aria-label="Close">X</button>
+      </div>
+      <div class="tabs">
+        <button class="tab is-active" data-tab="self-learning">Self Learning</button>
+        <button class="tab" data-tab="courses">Courses</button>
+      </div>
+      <div class="window-content" id="tab-self-learning">
+        <div class="learning-item">
+          <span class="learning-title">Mathematics for Machine Learning - Deisenroth, Faisal & Ong</span>
+          <div class="learning-badges">
+            <span class="learning-type type-book">Book</span>
+            <span class="learning-status status-ongoing">Ongoing</span>
+          </div>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Big Data and Education - Ryan Baker</span>
+          <div class="learning-badges">
+            <span class="learning-type type-course">MOOC</span>
+            <span class="learning-status status-complete">Complete</span>
+          </div>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">AI Engineering - Chip Huyen</span>
+          <div class="learning-badges">
+            <span class="learning-type type-book">Book</span>
+            <span class="learning-status status-complete">Complete</span>
+          </div>
+        </div>
+      </div>
+      <div class="window-content" id="tab-courses" style="display: none;">
+        <div class="learning-item">
+          <span class="learning-title">Introduction to Computer Science</span>
+          <span class="learning-type type-fall">Fall 2021</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Introduction to Data Structures</span>
+          <span class="learning-type type-spring">Spring 2022</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Discrete Mathematics</span>
+          <span class="learning-type type-fall">Fall 2022</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Data Science</span>
+          <span class="learning-type type-fall">Fall 2022</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Systems Programming</span>
+          <span class="learning-type type-spring">Spring 2023</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Computer Organization</span>
+          <span class="learning-type type-spring">Spring 2023</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Analysis of Algorithms</span>
+          <span class="learning-type type-fall">Fall 2023</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Artificial Intelligence</span>
+          <span class="learning-type type-fall">Fall 2023</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Software Engineering</span>
+          <span class="learning-type type-fall">Fall 2023</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Big Data and Society</span>
+          <span class="learning-type type-spring">Spring 2024</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-title">Development of AI-Based Educational Programs</span>
+          <span class="learning-type type-spring">Spring 2024</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="window-projects" style="display: none;">
+      <div class="window-header">
+        <span class="window-title">Projects</span>
+        <button class="window-close" aria-label="Close">X</button>
+      </div>
+      <div class="window-content">
+        <div class="project-card">
+          <div class="project-screenshot">
+            <img src="assets/project-alpha.png" alt="Project Alpha screenshot">
+          </div>
+          <div class="project-info">
+            <div class="project-name">Bible Verse Explorer</div>
+            <p class="project-desc">
+              Exploring the galaxy of bible verses in 3D space.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
+              <span class="project-tag"><i class="devicon-python-plain"></i> Python</span>
+              <span class="project-tag"><i class="devicon-flask-original"></i> Flask</span>
+              <span class="project-tag"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+              <span class="project-tag"><i class="devicon-docker-plain"></i> Docker</span>
+              <span class="project-tag">Sentence-Transformer</span>
+              <span class="project-tag"><i class="devicon-threejs-original"></i> Three.js</span>
+            </div>
+            <div class="project-actions">
+              <a href="" class="project-btn" target="_blank" rel="noopener">View Project</a>
+              <a href="https://github.com/joseph-kimm/SimilarBibleVerseFinder" class="project-btn" target="_blank" rel="noopener">View Code</a>
+              <button class="project-btn" data-journal="journal-alpha">View Project Journal</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-screenshot">
+            <img src="assets/project-cli.png" alt="CLI Dashboard screenshot">
+          </div>
+          <div class="project-info">
+            <div class="project-name">Language Buddy</div>
+            <p class="project-desc">
+              Learning langauges while chatting with AI chatbots.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag"><i class="devicon-typescript-plain"></i> Typescript</span>
+              <span class="project-tag"><i class="devicon-python-plain"></i> Python</span>
+              <span class="project-tag"><i class="devicon-react-original"></i> React</span>
+              <span class="project-tag"><i class="devicon-nextjs-plain"></i> Next.js</span>
+              <span class="project-tag"><i class="devicon-graphql-plain"></i> GraphQL</span>
+              <span class="project-tag"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+              <span class="project-tag">PEFT</span>
+              <span class="project-tag">Qwen</span>
+              <span class="project-tag"><i class="devicon-kaggle-original"></i> Kaggle</span>
+              <span class="project-tag"><i class="devicon-vercel-original"></i> Vercel</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-btn" target="_blank" rel="noopener">View Project</a>
+              <a href="#" class="project-btn" target="_blank" rel="noopener">View Code</a>
+              <button class="project-btn" data-journal="journal-cli">View Project Journal</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-screenshot">
+            <img src="assets/ai_cu.png" alt="Generative Art Tool screenshot">
+          </div>
+          <div class="project-info">
+            <div class="project-name">AI_CU</div>
+            <p class="project-desc">
+              Helping students focus on recorded lectures.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag"><i class="devicon-python-plain"></i> Python</span>
+              <span class="project-tag">Tkinter</span>
+              <span class="project-tag"><i class="devicon-opencv-plain"></i> OpenCV</span>
+              <span class="project-tag"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/joseph-kimm/AI_CU" class="project-btn" target="_blank" rel="noopener">View Code</a>
+              <button class="project-btn" data-journal="journal-art">View Project Journal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journal windows — one per project -->
+    <div class="window" id="window-journal-alpha" style="display: none;">
+      <div class="window-header">
+        <span class="window-title">Journal &mdash; Bible Verse Explorer</span>
+        <button class="window-close" aria-label="Close">X</button>
+      </div>
+      <div class="window-content window-content--journal">
+        <h3>TLDR;</h3>
+        <p>
+          This project turns the entire Bible into a vector space, precomputes semantic cross-references between verses, and lets users explore them visually as a galaxy.
+        </p>
+        <h3>Features to Add Later</h3>
+        <ul>
+          <li>Support for multiple languages</li>
+          <li>Better dimensionality reduction techniques to represent the verse embeddings in 3D</li>
+          <li>Faster query search using ANN algorithms like IVF-PQ or HNSW</li>
+        </ul>
+        <h3>Journal Entry</h3>
+        <p>
+          This project began with a simple idea. One of the best ways of studying the bible is through cross references.
+          Maybe sentence embeding could be used to achieve a similar result?
+          <br>
+          <br>
+          First, using sentence-transformer library, I converted all the bible verses as an embedding of 384 dimensions.
+          All data for each bible verse, including the embedding was stored using postgreSQL with pg-vector extension.
+          Supabase was used to store all the data.
+          I used a relational database because there was a clear structure in my data.
+          <br>
+          <br>
+          Then, there was some debate on the computation required to compare the similarity of the verses.
+          I could calculate it each time there was a search, but this would be very slow to compute with k-nearest neighbors.
+          Because the database of bible verses would never be updated, I ended up doing the calculation beforehand and saving top 50 verses for each verse in the DB.
+          <br>
+          <br>
+          Next, I thought it would be useful to have a feature to compare the user query embedding with the verses.
+          Because the user input is not predetermined, I had to use k-nearest neighbors for this task.
+          It works, but the speed is quite slow. I hope to improve it using Approximate Nearest Neighbor algorithms.
+          <br>
+          <br>
+          After deciding the structure of the project, I had to think about the best way to present the results in the frontend.
+          Initially, it was a regular form with dropdown menus to choose a bible verse and a text box to input a query.
+          But this looked way too dull.
+          <br>
+          <br>
+          Instead, I decided to represent each verse as a star, with all the verses representing a galaxy or universe of verses.
+          This fit neatly with the main purpose of the site, which was to allow users to "explore" the verses.
+          <br>
+          <br>
+          Because this required reducing the embeddinng from 384 dimensions to 3, I began looking for dimensionality reduction techniques. 
+          To be honest, I am still not very familiar with dimensionality reduction techniques, but UMAP seemed to preserve the overall relation between embeddings better than others.
+          <br>
+          <br>
+          Because I wanted to get a working site as soon as possible, I didn't get to test with various parameters for UMAP.
+          This, along with the inherent difficult of reducing the dimension more than hundredfold, led to a representation that is not optimal.
+          If you search for different verses / queries, you will observe that some of them are close to each other, but many are also far away from one another.
+          <br>
+          <br>
+          The website was originally hosted in Google Cloud, but now i switched to modal as my free trial of 3 months ended.
+        </p>
+      </div>
+    </div>
+
+    <div class="window" id="window-journal-cli" style="display: none;">
+      <div class="window-header">
+        <span class="window-title">Journal &mdash; Language Buddy</span>
+        <button class="window-close" aria-label="Close">X</button>
+      </div>
+      <div class="window-content window-content--journal">
+        <h3>TLDR;</h3>
+        <p>
+          An AI language-learning app with Next.js framework to provide a conversational partner with personalization.
+          A fine-tuned small-sized multilingual LLM is hosted with optimization techniques like quantization and adapter switching.
+        </p>
+        <h3>Features to Add Later</h3>
+        <ul>
+          <li>Increasing performance with various prompting methods</li>
+          <li>Buttons with LLM API call for features like improve the sentence / explain in native language</li>
+          <li>RAG to obtain relevant information from the entire chat history</li>
+        </ul>
+        <h3>Journal Entry</h3>
+        <p>
+          [Application]
+          This project came to my mind as I was studying spanish on my own. 
+          I was studying the language through a textbook, along with youtube videos and podcast for listening practice. 
+          However, because I was studying alone without a partner, I couldn't apply what I learned in natural setting.
+          So, why not build an AI conversational partner that can help me practice spanish more naturally?
+          <br>
+          <br>
+          This time, I spend more of my energy on the framework that I plan to use.
+          I wanted to try a full stack framework, so I decided on Next.js with typescript.
+          I also used graphQL as my api as I thought the schemas would have synergy with type safety.
+          Because chatting required constant flow of information from the bot, graphQL sbu
+          <br>
+          <br>
+          I spent some time designing the schema for messages and conversation. 
+          I used MongoDB this time, because the data would keep getting added and I wanted to stay flexible on what would be included in the database.
+          <br>
+          <br>
+          First, I started with the basic components required for a chatting app, including message bubbles, date dividers, and side navigation.
+          Then TTS buttons 
+
+          The coding didn't take much time, especially with the help of Claude Code, but majority of my time was spent of how to best personalize the chatbot for each user.
+          What information can I obtain from the user which will be useful for the model?
+          <br>
+          <br>
+          [AI Engineering]
+          <br>
+          <br>
+          Then, it was time to choose the model.
+          My original model was Llama 3.2 1B Instruct.
+          Because I was trying to not spend any money for this project and make it sustainable, I needed a small model that could run in free version of HF space.
+          <br>
+          <br>
+          After choosing the model, I tested the model with a series of inputs.
+          What I found out was that it generally gave responses that were too verbose and unnatural.
+          This was even after changing the system prompt to make the responses feel like regular chatting.
+          <br>
+          <br>
+          I thought this would be a good opportunity to practice finetuning.
+          At first, I wanted to finetune the model on specific characters.
+          For example, a user can chat with a Don Quioxte to learn spanish, or a Korean idol to learn Korean.
+          But when I began searching for training data, I realized this task would be near impossible.
+          <br>
+          <br>
+          So, instead I decided to finetune the model per langauge.
+          It would be done with 3 langauges: Korean, English, and Spanish.
+          I chose English and Korean because I could check the quality of the response.
+          I chose Spanish because I wanted to use the app myself to learn the language.
+          <br>
+          <br>
+          I still struggled to find conversational data that could help with my finetuning. 
+          So after searching through kaggle and huggingface dataset, I decide to use synthetic data.
+          Because I had $300 of free credit for Google Cloud Console, I decided to use Gemeni 3 flash for generating data.
+          <br>
+          <br>
+          I spent some time thinking of variables to include for the data.
+          I made a list of various topics that users would generally be interested in, like travel or food.
+          Other variables included conversation length (no. of messages), conversation position, and and CEFR levels.
+          I also experimented with other variables like politeness and correction styles, but decided not to include them at the end.
+          <br>
+          <br>
+          After generating 2000 conversations per language, I used a the peft library in kaggle notebook to finetune the model.
+          Training loss, validation loss, perplexity, and LoRA weights all showed that the model was learning well.
+          I chose Huggingface space to host the finetuned model, as it offered 16GB of RAM for free.
+          Once I set up the APIs for token streaming, adapter switching, and a simple gradio UI, I began testing the model.
+          <br>
+          <br>
+          Then I ran into 2 issues.
+          First was even the 1B parameter model was extremely slow for inference, sometimes taking 5-10 minutes to generate a simple response.
+          Despite having minimal system prompt and short messages, it was simply unusuable.
+          <br>
+          <br>
+          Second, the 1B model did not have the performance I expected.
+          It worked okay in English, but the performance degraded when I switched to spanish or korean.
+          It was especially disasterous in Korean, where the finetuned model struggled to even understand the messages that I was sending.
+          It just kept repeating incoherent sentences one after the other.
+          I first thought I did something wrong during finetuning, but the problem persisted even with the base model.
+          <br>
+          <br>
+          To solve the first issue, I looked for ways to optimize inference on CPU.
+          I came accross the llama-cpp library and the GGUF format, which was known to improve inference on CPU setting.
+          So I quantized the model to Q4_K_M, uploaded the models to HF model repo, and switched from transformers to llama_cpp.
+          Initially it seemed to work faster, but then the speed kept fluctuating per message.
+          Sometimes it would respond in 5 seconds, while other times it would take 5 minutes.
+          After trying various optimization methods and failing to observe significant or persistent improvements, I decided to move on from HF space.
+          I decided on modal, primarily because it offered $30 of free credit per month to deploy my model.
+          <br>
+          <br>
+          For the second issue, I looked for varoiu
+        </p>
+      </div>
+    </div>
+
+    <div class="window" id="window-resume" style="display: none;">
+      <div class="window-header">
+        <span class="window-title">Resume</span>
+        <button class="window-close" aria-label="Close">X</button>
+      </div>
+      <div class="resume-toolbar">
+        <a href="assets/resume.pdf" download class="project-btn">Download PDF</a>
+      </div>
+      <div class="window-content window-content--resume">
+        <iframe src="assets/resume.pdf" title="Resume"></iframe>
+      </div>
+    </div>
+
+    <div class="window" id="window-journal-art" style="display: none;">
+      <div class="window-header">
+        <span class="window-title">Journal &mdash; AI_CU</span>
+        <button class="window-close" aria-label="Close">X</button>
+      </div>
+      <div class="window-content window-content--journal">
+        <h3>TLDR;</h3>
+        <p>
+          A python program to help students pay attention to video lectures by detecting 
+          face presence and closed eyes with OpenCB library. 
+        </p>
+        <h3>Features to Add Later</h3>
+        <ul>
+          <li>Migration to web</li>
+          <li>In-depth analysis of student behavior to discover parts of lecture that are not engaging</li>
+        </ul>
+        <h3>Journal Entry</h3>
+        <p>
+          This project was part of the undergraduate intern research project in the AIEd Lab.
+          With many of the courses turning remote, we knew that students often fail to engage with the material through recorded lectures -
+          many would simply let the video play with doing various off-tasks.
+          Therefore, we wanted to find a way that helps student focus while not being overly instrusive.
+          <br>
+          <br>
+          Many approaches were discussed to measure student attention, but in order to keep the the project simple,
+          we opted for face presence and open eyes as a marker for student paying attention to the lecture.
+          The lecture would stop if face was not detected or eyes were closed for a certain period of time.
+          <br>
+          <br>
+          After developing a prototype, we ran tests on lab computers. 
+          Realzing that the program would not run smoothly on many of the computers, 
+          we switched to multithreading to have the video and face detection run parallel.
+          <br>
+          <br>
+          Unfortunately, I had to join the military service before the experiments actually took place.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="taskbar">
+    <div class="taskbar-links">
+      <a href="mailto:josephkiminkim@email.com" class="taskbar-btn" title="Email">
+        <svg class="taskbar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span>Email</span>
+      </a>
+      <a href="https://github.com/joseph-kimm" target="_blank" rel="noopener" class="taskbar-btn" title="GitHub">
+        <i class="devicon-github-original"></i>
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/joseph-kim-251333229/" target="_blank" rel="noopener" class="taskbar-btn" title="LinkedIn">
+        <i class="devicon-linkedin-plain"></i>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+=======
 <!DOCTYPE HTML>
 <!--
 	Stellar by HTML5 UP
@@ -269,3 +891,4 @@
 
 	</body>
 </html>
+>>>>>>> 20f9a1868ff4bc2251f88cabdcae48a2f34c0b16
