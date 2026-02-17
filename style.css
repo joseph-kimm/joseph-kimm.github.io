@@ -671,7 +671,7 @@ img {
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
       "folders photo"
-      "folders about"
+      "about   about"
       ".       .";
     gap: 6px;
   }
@@ -733,7 +733,8 @@ img {
     right: auto !important;
     bottom: auto !important;
     grid-area: about;
-    max-height: 28vh;
+    align-self: start;
+    max-height: 34vh;
     opacity: 1;
     transform: none;
   }
