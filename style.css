@@ -671,7 +671,7 @@ img {
     grid-template-rows: auto auto;
     grid-template-areas:
       "folders photo"
-      "about   about";
+      "folders about";
     gap: 10px;
   }
 
