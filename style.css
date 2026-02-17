@@ -690,12 +690,12 @@ img {
   }
 
   .folder-icon {
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
   }
 
   .folder-label {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   /* Photo: top-right, image crops from top */
@@ -732,9 +732,15 @@ img {
     right: auto !important;
     bottom: auto !important;
     grid-area: about;
-    max-height: none;
+    max-height: 28vh;
     opacity: 1;
     transform: none;
+  }
+
+  #window-about .window-content--about {
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-y: auto;
   }
 
   /* Folder-opened windows: full-screen overlay */
