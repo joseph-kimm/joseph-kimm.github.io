@@ -734,6 +734,7 @@ img {
     bottom: auto !important;
     grid-area: about;
     align-self: start;
+    margin-top: 8px;
     max-height: 34vh;
     opacity: 1;
     transform: none;
