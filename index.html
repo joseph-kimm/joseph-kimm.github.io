@@ -297,7 +297,7 @@
       <div class="window-content">
         <div class="project-card">
           <div class="project-screenshot">
-            <img src="assets/project-alpha.png" alt="Project Alpha screenshot">
+            <img src="assets/bible.png" alt="Bible Explorer screenshot">
           </div>
           <div class="project-info">
             <div class="project-name">Bible Verse Explorer</div>
@@ -309,12 +309,11 @@
               <span class="project-tag"><i class="devicon-python-plain"></i> Python</span>
               <span class="project-tag"><i class="devicon-flask-original"></i> Flask</span>
               <span class="project-tag"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
-              <span class="project-tag"><i class="devicon-docker-plain"></i> Docker</span>
-              <span class="project-tag">Sentence-Transformer</span>
               <span class="project-tag"><i class="devicon-threejs-original"></i> Three.js</span>
+              <span class="project-tag">Sentence-Transformer</span>
             </div>
             <div class="project-actions">
-              <a href="" class="project-btn" target="_blank" rel="noopener">View Project</a>
+              <a href="https://josephjiminkim--bible-verse-explorer-flask-app.modal.run/" class="project-btn" target="_blank" rel="noopener">View Project</a>
               <a href="https://github.com/joseph-kimm/SimilarBibleVerseFinder" class="project-btn" target="_blank" rel="noopener">View Code</a>
               <button class="project-btn" data-journal="journal-alpha">View Project Journal</button>
             </div>
@@ -350,7 +349,7 @@
         </div>
         <div class="project-card">
           <div class="project-screenshot">
-            <img src="assets/ai_cu.png" alt="Generative Art Tool screenshot">
+            <img src="assets/ai_cu.png" alt="AI_CU screenshot">
           </div>
           <div class="project-info">
             <div class="project-name">AI_CU</div>
@@ -385,19 +384,22 @@
         </p>
         <h3>Features to Add Later</h3>
         <ul>
-          <li>Support for multiple languages</li>
+          <li>Support for multiple languages and translation versions</li>
           <li>Better dimensionality reduction techniques to represent the verse embeddings in 3D</li>
           <li>Faster query search using ANN algorithms like IVF-PQ or HNSW</li>
+          <li>Mobile Friendly website</li>
         </ul>
         <h3>Journal Entry</h3>
         <p>
-          This project began with a simple idea. One of the best ways of studying the bible is through cross references.
-          Maybe sentence embeding could be used to achieve a similar result?
+          This project began as I was studying the bible. 
+          Often, when I was analyzing a verse, I would need to reference other verses to further reflect on its meaning.
+          This is usually done through cross references, but I thought that sentence embedding could be used to achieve a similar result.
           <br>
           <br>
-          First, using sentence-transformer library, I converted all the bible verses as an embedding of 384 dimensions.
-          All data for each bible verse, including the embedding was stored using postgreSQL with pg-vector extension.
-          Supabase was used to store all the data.
+          First, I obtained a dataset of the NKJV bible and cleaned the csv file to have the necessary information.
+          Then, using sentence-transformer library, I converted all the bible verses as an embedding of 384 dimensions.
+          All data for each bible verse, including the embedding was stored in npz format initially.
+          The data was migrated to postgreSQL with pg-vector extension in Supabase later on.
           I used a relational database because there was a clear structure in my data.
           <br>
           <br>
@@ -406,9 +408,12 @@
           Because the database of bible verses would never be updated, I ended up doing the calculation beforehand and saving top 50 verses for each verse in the DB.
           <br>
           <br>
-          Next, I thought it would be useful to have a feature to compare the user query embedding with the verses.
-          Because the user input is not predetermined, I had to use k-nearest neighbors for this task.
-          It works, but the speed is quite slow. I hope to improve it using Approximate Nearest Neighbor algorithms.
+          Next, I thought it would be useful to have a feature to compare the user query with the verses.
+          For example, if the user searches the word "love", the app would return verses that are most semantically similar with the word.
+          This is done through a simple brute force KNN algorithm.
+          First, I thought it was the similarity calculation that that was the limiting factor, but it was actually 
+          the fetching of 31000 embeddings that caused the bottleneck.
+          So, the embeddings are now fetched after the first search.
           <br>
           <br>
           After deciding the structure of the project, I had to think about the best way to present the results in the frontend.
@@ -425,11 +430,14 @@
           <br>
           <br>
           Because I wanted to get a working site as soon as possible, I didn't get to test with various parameters for UMAP.
-          This, along with the inherent difficult of reducing the dimension more than hundredfold, led to a representation that is not optimal.
-          If you search for different verses / queries, you will observe that some of them are close to each other, but many are also far away from one another.
+          This, along with the inherent difficult of reducing the dimension more than hundredfold, led to a representation that is not always.
+          If you search for different verses / queries, you will observe that some of them are close to each other, but many are also far away from one another,
+          showing the limitation of the dimensionality reduction technique.
           <br>
           <br>
-          The website was originally hosted in Google Cloud, but now i switched to modal as my free trial of 3 months ended.
+          The website was originally deployed in Google Cloud.
+          At the moment, I switched to Model, and the site will hopefully continue to be alive as long as Supabase and Modal does 
+          not change their free tier.
         </p>
       </div>
     </div>
