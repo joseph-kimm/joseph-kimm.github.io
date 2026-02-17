@@ -680,17 +680,22 @@ img {
     grid-area: folders;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
     align-self: start;
   }
 
   .folder {
     position: static !important;
+    padding: 2px;
   }
 
   .folder-icon {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .folder-label {
+    font-size: 10px;
   }
 
   /* Photo: top-right, image crops from top */
