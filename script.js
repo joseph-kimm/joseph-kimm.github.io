@@ -198,3 +198,21 @@
     });
   });
 })();
+
+// === Photo Carousel ===
+const carouselPhotos = [
+  'assets/me-three.png',
+  'assets/me-four.png',
+  'assets/me-five.png',
+];
+let carouselIndex = 2; // start on me-three.png
+
+const carouselImg = document.getElementById('carousel-img');
+document.querySelector('.carousel-btn--prev').addEventListener('click', () => {
+  carouselIndex = (carouselIndex - 1 + carouselPhotos.length) % carouselPhotos.length;
+  carouselImg.src = carouselPhotos[carouselIndex];
+});
+document.querySelector('.carousel-btn--next').addEventListener('click', () => {
+  carouselIndex = (carouselIndex + 1) % carouselPhotos.length;
+  carouselImg.src = carouselPhotos[carouselIndex];
+});

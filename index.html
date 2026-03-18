@@ -46,7 +46,11 @@
         <!-- <button class="window-close" aria-label="Close">X</button> -->
       </div>
       <div class="window-content window-content--photo">
-        <img src="assets/me-three.png" alt="Photo of Joseph">
+        <div class="photo-carousel">
+          <button class="carousel-btn carousel-btn--prev" aria-label="Previous photo">&#8249;</button>
+          <img src="assets/me-three.png" alt="Photo of Joseph" id="carousel-img">
+          <button class="carousel-btn carousel-btn--next" aria-label="Next photo">&#8250;</button>
+        </div>
       </div>
     </div>
 
@@ -297,6 +301,35 @@
       <div class="window-content">
         <div class="project-card">
           <div class="project-screenshot">
+            <img src="assets/language_buddy.png" alt="Language Buddy screenshot">
+          </div>
+          <div class="project-info">
+            <div class="project-name">Language Buddy</div>
+            <p class="project-desc">
+              Learning langauges by interacting with AI chatbots.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag"><i class="devicon-typescript-plain"></i> Typescript</span>
+              <span class="project-tag"><i class="devicon-python-plain"></i> Python</span>
+              <span class="project-tag"><i class="devicon-react-original"></i> React</span>
+              <span class="project-tag"><i class="devicon-nextjs-plain"></i> Next.js</span>
+              <span class="project-tag"><i class="devicon-graphql-plain"></i> GraphQL</span>
+              <span class="project-tag"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+              <span class="project-tag"><i class="devicon-redis-plain"></i> Redis</span>
+              <span class="project-tag"><i class="devicon-kaggle-original"></i> Kaggle</span>
+              <span class="project-tag"><i class="devicon-vercel-original"></i> Vercel</span>
+              <span class="project-tag">PEFT</span>
+              <span class="project-tag">Qwen</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://language-buddy-app-six-mu.vercel.app/" class="project-btn" target="_blank" rel="noopener">View Project</a>
+              <a href="https://github.com/joseph-kimm/Language-Learning-App" class="project-btn" target="_blank" rel="noopener">View Code</a>
+              <button class="project-btn" data-journal="journal-cli">View Project Journal</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-screenshot">
             <img src="assets/bible.png" alt="Bible Explorer screenshot">
           </div>
           <div class="project-info">
@@ -316,34 +349,6 @@
               <a href="https://josephjiminkim--bible-verse-explorer-flask-app.modal.run/" class="project-btn" target="_blank" rel="noopener">View Project</a>
               <a href="https://github.com/joseph-kimm/SimilarBibleVerseFinder" class="project-btn" target="_blank" rel="noopener">View Code</a>
               <button class="project-btn" data-journal="journal-alpha">View Project Journal</button>
-            </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-screenshot">
-            <img src="assets/project-cli.png" alt="CLI Dashboard screenshot">
-          </div>
-          <div class="project-info">
-            <div class="project-name">Language Buddy</div>
-            <p class="project-desc">
-              Learning langauges while chatting with AI chatbots.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag"><i class="devicon-typescript-plain"></i> Typescript</span>
-              <span class="project-tag"><i class="devicon-python-plain"></i> Python</span>
-              <span class="project-tag"><i class="devicon-react-original"></i> React</span>
-              <span class="project-tag"><i class="devicon-nextjs-plain"></i> Next.js</span>
-              <span class="project-tag"><i class="devicon-graphql-plain"></i> GraphQL</span>
-              <span class="project-tag"><i class="devicon-mongodb-plain"></i> MongoDB</span>
-              <span class="project-tag">PEFT</span>
-              <span class="project-tag">Qwen</span>
-              <span class="project-tag"><i class="devicon-kaggle-original"></i> Kaggle</span>
-              <span class="project-tag"><i class="devicon-vercel-original"></i> Vercel</span>
-            </div>
-            <div class="project-actions">
-              <a href="#" class="project-btn" target="_blank" rel="noopener">View Project</a>
-              <a href="#" class="project-btn" target="_blank" rel="noopener">View Code</a>
-              <button class="project-btn" data-journal="journal-cli">View Project Journal</button>
             </div>
           </div>
         </div>
@@ -450,39 +455,44 @@
       <div class="window-content window-content--journal">
         <h3>TLDR;</h3>
         <p>
-          An AI language-learning app with Next.js framework to provide a conversational partner with personalization.
+          An AI language-learning app with Next.js framework to provide a conversational partner with personalized learning.
           A fine-tuned small-sized multilingual LLM is hosted with optimization techniques like quantization and adapter switching.
         </p>
         <h3>Features to Add Later</h3>
         <ul>
           <li>Increasing performance with various prompting methods</li>
-          <li>Buttons with LLM API call for features like improve the sentence / explain in native language</li>
           <li>RAG to obtain relevant information from the entire chat history</li>
+          <li>Online chatting with other users and group chat</li>
         </ul>
         <h3>Journal Entry</h3>
         <p>
           [Application]
+          <br>
+          <br>
           This project came to my mind as I was studying spanish on my own. 
           I was studying the language through a textbook, along with youtube videos and podcast for listening practice. 
-          However, because I was studying alone without a partner, I couldn't apply what I learned in natural setting.
+          However, because I was studying alone without a partner, I didn't have the opportunity to practice the languge in natural setting.
           So, why not build an AI conversational partner that can help me practice spanish more naturally?
           <br>
           <br>
-          This time, I spend more of my energy on the framework that I plan to use.
           I wanted to try a full stack framework, so I decided on Next.js with typescript.
           I also used graphQL as my api as I thought the schemas would have synergy with type safety.
-          Because chatting required constant flow of information from the bot, graphQL sbu
-          <br>
-          <br>
-          I spent some time designing the schema for messages and conversation. 
           I used MongoDB this time, because the data would keep getting added and I wanted to stay flexible on what would be included in the database.
+          With the big picture decided, I created a To-do list with detailed implementations, features to include, etc.
+          A claude.md file was also designed for a easier AI workflow.
           <br>
           <br>
-          First, I started with the basic components required for a chatting app, including message bubbles, date dividers, and side navigation.
-          Then TTS buttons 
-
-          The coding didn't take much time, especially with the help of Claude Code, but majority of my time was spent of how to best personalize the chatbot for each user.
-          What information can I obtain from the user which will be useful for the model?
+          First was the basic components of the chatting app.
+          This included a chat interface, message bubbles, date dividers, and side navigation.
+          Then TTS and STT features were added for listening and speaking practice.
+          At the moment, I used the webspeech API so the quality of the TTS is quite bad.
+          I will probably work on a using a better API later on.
+          <br>
+          <br>
+          After a had the chatting app, next was deciding what information to collect from the user to 
+          provide a personalized learning experience.
+          This included a brief introduction, language level, correction style, learning goals, and interest.
+          (correction style was removed as the finedtuned model was not following the correction instructions well)
           <br>
           <br>
           [AI Engineering]
@@ -490,65 +500,78 @@
           <br>
           Then, it was time to choose the model.
           My original model was Llama 3.2 1B Instruct.
-          Because I was trying to not spend any money for this project and make it sustainable, I needed a small model that could run in free version of HF space.
+          It was multilingual and small enough to be deployed sustainably.
           <br>
           <br>
-          After choosing the model, I tested the model with a series of inputs.
-          What I found out was that it generally gave responses that were too verbose and unnatural.
-          This was even after changing the system prompt to make the responses feel like regular chatting.
-          <br>
-          <br>
-          I thought this would be a good opportunity to practice finetuning.
+          After choosing the model, I tested the model with a series of conversations that a user may have.
+          the response were too verbose and unnatural even after prompt engineering, so I decided to finetune the model.
           At first, I wanted to finetune the model on specific characters.
-          For example, a user can chat with a Don Quioxte to learn spanish, or a Korean idol to learn Korean.
-          But when I began searching for training data, I realized this task would be near impossible.
+          For example, a user can chat with a Don Quioxte to learn spanish, or K-Drama character to learn Korean.
+          But when I began searching for training data, I realized it would be impossible to get large amount of quality data for it.
           <br>
           <br>
-          So, instead I decided to finetune the model per langauge.
+          So, instead I decided to finetune the model per langauge with LoRA.
           It would be done with 3 langauges: Korean, English, and Spanish.
           I chose English and Korean because I could check the quality of the response.
           I chose Spanish because I wanted to use the app myself to learn the language.
           <br>
           <br>
-          I still struggled to find conversational data that could help with my finetuning. 
-          So after searching through kaggle and huggingface dataset, I decide to use synthetic data.
-          Because I had $300 of free credit for Google Cloud Console, I decided to use Gemeni 3 flash for generating data.
-          <br>
-          <br>
-          I spent some time thinking of variables to include for the data.
-          I made a list of various topics that users would generally be interested in, like travel or food.
+          I still struggled to find multi-turn conversational data that could help with my finetuning. 
+          So after digging through kaggle and huggingface datasets with no satisfactory results, 
+          I decide to use synthetic data.
+          I spent some time thinking of different variables to make the data more diverse.
+          A list of various topics that users would generally be interested in, like travel or food.
           Other variables included conversation length (no. of messages), conversation position, and and CEFR levels.
-          I also experimented with other variables like politeness and correction styles, but decided not to include them at the end.
+          I also experimented with other variables like politeness and correction styles, but decided against it in the end.
           <br>
           <br>
           After generating 2000 conversations per language, I used a the peft library in kaggle notebook to finetune the model.
+          (free GPUs!)
           Training loss, validation loss, perplexity, and LoRA weights all showed that the model was learning well.
           I chose Huggingface space to host the finetuned model, as it offered 16GB of RAM for free.
           Once I set up the APIs for token streaming, adapter switching, and a simple gradio UI, I began testing the model.
           <br>
           <br>
           Then I ran into 2 issues.
-          First was even the 1B parameter model was extremely slow for inference, sometimes taking 5-10 minutes to generate a simple response.
-          Despite having minimal system prompt and short messages, it was simply unusuable.
           <br>
+          1. Despite having minimal system prompt and 1B paramter model, inference was extremely slow, 
+          taking 5-10 minutes to generate a simple response.
           <br>
-          Second, the 1B model did not have the performance I expected.
-          It worked okay in English, but the performance degraded when I switched to spanish or korean.
-          It was especially disasterous in Korean, where the finetuned model struggled to even understand the messages that I was sending.
-          It just kept repeating incoherent sentences one after the other.
-          I first thought I did something wrong during finetuning, but the problem persisted even with the base model.
+          2. The performance was just bad. It was subpar in English, but struggle to understand the language
+          or make coherent sentences in Spanish and Korean.
+          I initially thought there was something wrong with finetuning, but the problem persisted with 
+          the base model as well.
+          (In hindsight, I should have tested the performance before finetuning...)
           <br>
           <br>
           To solve the first issue, I looked for ways to optimize inference on CPU.
-          I came accross the llama-cpp library and the GGUF format, which was known to improve inference on CPU setting.
-          So I quantized the model to Q4_K_M, uploaded the models to HF model repo, and switched from transformers to llama_cpp.
-          Initially it seemed to work faster, but then the speed kept fluctuating per message.
-          Sometimes it would respond in 5 seconds, while other times it would take 5 minutes.
-          After trying various optimization methods and failing to observe significant or persistent improvements, I decided to move on from HF space.
-          I decided on modal, primarily because it offered $30 of free credit per month to deploy my model.
+          I quantized the model to Q4_K_M, tried the GGUF format and llama-cpp library, but it was still too slow.
+          After many tries, I decided to move on to a hosting service that provided GPU and more RAM. 
           <br>
           <br>
-          For the second issue, I looked for varoiu
+          Because I was no longer restrained by the resources in Huggingface space, I searched for a better model.
+          I ended up with Qwen2.5-7B-Instruct.
+          This base model initially was giving Chinese responses to Korean prompts, and I thought about adding filters for each langauge.
+          Fortunately, this issue was fixed with finetuning.
+          <br>
+          <br>
+          Finally, I designed a few different personalities for the chatbot to give more diverse experience for the learners.
+          These included a curious personality a playful one, and more.
+          Currently, they are done through prompt engineering, but it may change finetuning later on.
+          <br>
+          <br>
+          [Return to Application]
+          <br>
+          <br>
+          After that, it was adding the final touches, checking for errors, and deployment.
+          Authetication was done through Auth.js with option for Google Credentials.
+          Because my GraphQL subscription required a Pub/Sub, Redis was used.
+          This setup would also be useful later for online group chats.
+          <br>
+          <br>
+          Currently, the model is hosted without a container and cold starts with requests, leading to slow intially responses.
+          Of course, both the performance and the speed would improve by using SOTA model APIs, but I wanted to have 
+          full control of all the parts of this project.
         </p>
       </div>
     </div>

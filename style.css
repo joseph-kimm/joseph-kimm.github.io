@@ -210,18 +210,50 @@ img {
   padding: 0;
   margin: 2px;
   background: url('assets/background.png') center / cover no-repeat;
+  height: 420px;
+  overflow: hidden;
 }
 
 .window-content--photo img {
   width: 100%;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: top;
 }
+
+.photo-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 4px 8px;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  border-radius: 3px;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.carousel-btn:hover { opacity: 1; }
+.carousel-btn--prev { left: 4px; }
+.carousel-btn--next { right: 4px; }
 
 /* === Photo & About — responsive desktop positioning === */
 #window-photo {
   top: 5vh;
   left: 20vw;
-  width: clamp(200px, 22vw, 320px);
+  width: clamp(260px, 29vw, 420px);
 }
 
 #window-about {
@@ -454,7 +486,6 @@ img {
 
 .project-screenshot {
   width: 100%;
-  aspect-ratio: 16 / 9;
   background: #e0e0e0;
   border-top: 1px solid #808080;
   border-left: 1px solid #808080;
@@ -466,8 +497,8 @@ img {
 
 .project-screenshot img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 .project-name {
@@ -716,12 +747,15 @@ img {
   }
 
   #window-photo .window-content--photo {
-    overflow: auto;
+    overflow: hidden;
+    height: 260px;
   }
 
   #window-photo .window-content--photo img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 
   /* Description: bottom, full width */
