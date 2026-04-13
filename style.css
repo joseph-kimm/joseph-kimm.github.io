@@ -209,7 +209,7 @@ img {
 .window-content--photo {
   padding: 0;
   margin: 2px;
-  background: url('assets/background.png') center / cover no-repeat;
+  background: url('assets/pictures/background.png') center / cover no-repeat;
   height: 420px;
   overflow: hidden;
 }

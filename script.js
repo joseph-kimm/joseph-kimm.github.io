@@ -201,9 +201,9 @@
 
 // === Photo Carousel ===
 const carouselPhotos = [
-  'assets/me-three.png',
-  'assets/me-four.png',
-  'assets/me-five.png',
+  'assets/pictures/me-three.png',
+  'assets/pictures/me-four.png',
+  'assets/pictures/me-five.png',
 ];
 let carouselIndex = 2; // start on me-three.png
 
