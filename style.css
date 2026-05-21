@@ -478,6 +478,15 @@ img {
   border-bottom: 1px solid #c0c0c0;
 }
 
+.project-card.is-highlighted {
+  animation: highlight-fade 1.5s ease-out;
+}
+
+@keyframes highlight-fade {
+  0%   { background-color: #d4e8ff; }
+  100% { background-color: transparent; }
+}
+
 .project-card:last-child {
   border-bottom: none;
   margin-bottom: 0;

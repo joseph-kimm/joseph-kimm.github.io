@@ -196,6 +196,26 @@
         }
       }
     });
+
+    // Hash-based deep link: open projects window and scroll to the project card
+    function handleProjectHash() {
+      var hash = window.location.hash; // e.g. "#project-tai"
+      if (!hash) return;
+      var card = document.querySelector(hash);
+      if (!card || !card.closest('#window-projects')) return;
+
+      openWindow('projects');
+
+      // Wait for the open animation, then scroll the card into view
+      setTimeout(function () {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        card.classList.add('is-highlighted');
+        setTimeout(function () { card.classList.remove('is-highlighted'); }, 1500);
+      }, 300);
+    }
+
+    handleProjectHash();
+    window.addEventListener('hashchange', handleProjectHash);
   });
 })();
 
