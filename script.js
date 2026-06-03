@@ -221,18 +221,29 @@
 
 // === Photo Carousel ===
 const carouselPhotos = [
-  'assets/pictures/me-three.png',
-  'assets/pictures/me-four.png',
-  'assets/pictures/me-five.png',
+  { src: 'assets/pictures/me-three.png', caption: 'Month Before Military Service, Oct 2024' },
+  { src: 'assets/pictures/me-four.png',  caption: "Daniel's wedding, Feb 2026" },
+  { src: 'assets/pictures/me-five.png',  caption: 'ACM SIGCSE Conference, March 2024' },
+  { src: 'assets/pictures/me-six.png',  caption: 'Cycle Trip Across Korea, Jun 2026' },
+
 ];
-let carouselIndex = 2; // start on me-three.png
+let carouselIndex = 0;
 
 const carouselImg = document.getElementById('carousel-img');
+const carouselCaption = document.getElementById('carousel-caption');
+
+function updateCarousel() {
+  carouselImg.src = carouselPhotos[carouselIndex].src;
+  carouselCaption.textContent = carouselPhotos[carouselIndex].caption;
+}
+
+updateCarousel();
+
 document.querySelector('.carousel-btn--prev').addEventListener('click', () => {
   carouselIndex = (carouselIndex - 1 + carouselPhotos.length) % carouselPhotos.length;
-  carouselImg.src = carouselPhotos[carouselIndex];
+  updateCarousel();
 });
 document.querySelector('.carousel-btn--next').addEventListener('click', () => {
   carouselIndex = (carouselIndex + 1) % carouselPhotos.length;
-  carouselImg.src = carouselPhotos[carouselIndex];
+  updateCarousel();
 });

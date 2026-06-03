@@ -23,7 +23,7 @@
         <span class="folder-label">Education</span>
       </button>
 
-      <button class="folder" data-window="learning" style="bottom: 170px; left: 50px;">
+      <button class="folder" data-window="learning" style="bottom: 320px; left: 50px;">
         <img class="folder-icon" src="iconset/green.iconset/icon_128x128.png" alt="" draggable="false">
         <span class="folder-label">Learning</span>
       </button>
@@ -51,6 +51,7 @@
           <img src="assets/pictures/me-three.png" alt="Photo of Joseph" id="carousel-img">
           <button class="carousel-btn carousel-btn--next" aria-label="Next photo">&#8250;</button>
         </div>
+        <div class="carousel-caption" id="carousel-caption"></div>
       </div>
     </div>
 
@@ -224,21 +225,21 @@
       </div>
       <div class="window-content" id="tab-self-learning">
         <div class="learning-item">
-          <span class="learning-title">Mathematics for Machine Learning - Deisenroth, Faisal & Ong</span>
+          <a class="learning-title" href="https://www.overleaf.com/6534944529rtmgjfxjrxcv#813a46" target="_blank" rel="noopener">Mathematics for Machine Learning - Deisenroth, Faisal & Ong</a>
           <div class="learning-badges">
             <span class="learning-type type-book">Book</span>
             <span class="learning-status status-ongoing">Ongoing</span>
           </div>
         </div>
         <div class="learning-item">
-          <span class="learning-title">Big Data and Education - Ryan Baker</span>
+          <a class="learning-title" href="https://docs.google.com/document/d/1UTPfv9c58E5zfYiKyuw_eEs1v3cm6bpxyrRC8Qp63H4/" target="_blank" rel="noopener">Big Data and Education - Ryan Baker</a>
           <div class="learning-badges">
             <span class="learning-type type-course">MOOC</span>
             <span class="learning-status status-complete">Complete</span>
           </div>
         </div>
         <div class="learning-item">
-          <span class="learning-title">AI Engineering - Chip Huyen</span>
+          <a class="learning-title" href="https://docs.google.com/document/d/1xVkWjrT-VF4uhE4nfMPar1cO5whwf6haBW_MRtix9iI/" target="_blank" rel="noopener">AI Engineering - Chip Huyen</a>
           <div class="learning-badges">
             <span class="learning-type type-book">Book</span>
             <span class="learning-status status-complete">Complete</span>
@@ -639,7 +640,7 @@
         <ul>
           <li>Use advanced RAG techniques like hybrid search, small-to-big retrieval, reranking</li>
           <li>Allow upload of various file types, including websites, ppt, drive, and more</li>
-          <li>Customize chat settings for pedagogical approaches</li>
+          <li>Measure RAG performance including recall, precision, and RAGAS framework</li>
         </ul>
         <h3>Journal Entry</h3>
         <p>
@@ -647,9 +648,9 @@
           <br>
           <br>
           This project came to mind as I began to reflect about returning to college after my military service.
-          One of the biggest issues of using generative AI for classes is that their answers are too general.
+          One of the biggest issues of using generative AI for class content is that their answers are too general.
           In other words, it is not specific to the terminologies or explanations provided by the teacher, which may
-          lead to disadvantages and confusion during both learning and exams.
+          lead to confusion during both learning and exams.
           To solve this problem, I wanted to create a learning AI teaching assistant program that can provide answers specific
           to way that class is taught by the teacher. 
           <br>
@@ -665,7 +666,7 @@
           blindly rely on the technology without deep understanding of the material.
           <br>
           <br>
-          However, even if I built the program, I will have no way of testing the quality of the software.
+          However, even if I built the program, I had no way of testing with the usage of the software.
           Therefore, I decided to switch it to a program for students.
           The students will upload their own materials and notes for various courses.
           They can interact with these materials by asking questions, generating summaries, 
@@ -679,7 +680,7 @@
           This time, I used Google Stitch to design the frontend, including the main page, chat page, summarize page, and test page.
           Although the experience was far from customizing every detail, it provided a good basis to start the app.
           As with the previous project, I continued to use React and Next.js.
-          I did want to try another framework, especially because the main focus of this project was on the RAG implmentation.
+          I did want to try another framework, but the main focus of this project was on the RAG implmentation and DB.
           <br>
           <br>
           <img src="assets/projects/tai_stitch.png" alt="Google Stitch Screenshot">
@@ -687,12 +688,6 @@
           <br>
           After completing the basics of frontend, I moved on to the backend.
           Python was the obvious choice, coupled with fastAPI for server and llamaindex for RAG.
-          As I continue building project after project, I am become more conscious on how to 
-          structure and divide my code to make it more 'clean'.
-          This time, with the help of AI, I layered my architecture so that each folder
-          is only responsible for a specific position in the project.
-          <br>
-          <br>
           Because a RAG application is inherently data intensive, I spent time designing my schemas 
           before actually beginning with code.
           The data would be arranged in the following order, decreasing in size: 
@@ -711,7 +706,7 @@
           <br>
           Because the ingesting and retrieval would depend on the RAG techniques 
           that I would implement, I spent some time reflecting on it as well.
-          The techniques I plan to implement include the following:
+          The techniques I hope to implement include the following:
           <br>
           <ul>
             <li><b>Citation</b> - providing users with details on the source of information produced by the assistant.</li>
@@ -736,7 +731,7 @@
           <br>
           After the chunks were complete, it was time to move on to the retrieval process.
           The basic retrieval process was simple, with postgresql handling the consine similarity calculation
-          with HNSW based index.
+          with HNSW-based index.
           However, I noticed that the structure of the answer and the citations were not consistent.
           The best way to get structured answer would be function calling, but 
           I thought I would start with strict prompting + validation and see if that is sufficient first.
@@ -849,7 +844,7 @@
           and I felt no need to implement the same thing again.
           <br>
           <br>
-          Throughout this project, I think the biggest gain was experiencing creating a data-intensive application.
+          Throughout this project, I think the biggest gain was experience creating a data-intensive application.
           I think this is the first time that I used tables and object storage to this extent, 
           constantly thinking of the best schema to represent the data that invovled in the RAG application.
         </p>
