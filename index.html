@@ -48,10 +48,23 @@
       <div class="window-content window-content--photo">
         <div class="photo-carousel">
           <button class="carousel-btn carousel-btn--prev" aria-label="Previous photo">&#8249;</button>
-          <img src="assets/pictures/me-three.png" alt="Photo of Joseph" id="carousel-img">
+          <img src="assets/pictures/me-three.webp" alt="Photo of Joseph" id="carousel-img">
           <button class="carousel-btn carousel-btn--next" aria-label="Next photo">&#8250;</button>
         </div>
         <div class="carousel-caption" id="carousel-caption"></div>
+      </div>
+    </div>
+
+    <div class="window" id="window-resume" style="display: none;">
+      <div class="window-header">
+        <span class="window-title">Resume</span>
+        <button class="window-close" aria-label="Close">X</button>
+      </div>
+      <div class="resume-toolbar">
+        <a href="assets/Joseph Kim Resume.pdf" download class="project-btn">Download PDF</a>
+      </div>
+      <div class="window-content window-content--resume">
+        <iframe src="assets/Joseph Kim Resume.pdf" title="Resume"></iframe>
       </div>
     </div>
 
@@ -61,11 +74,12 @@
         <span class="window-title">about.txt</span>
         <!-- <button class="window-close" aria-label="Close">X</button> -->         </div>
       <div class="window-content window-content--about">
-        <p>Hello! I’m Joseph, a researcher / programmer / student.</p>
+        <p>Hello! I’m Joseph!</p>
         <br>
-        <p>I am currently serving as an information security specialist in the Cyber Operational Group, Air Force for my mandatory military service in Korea.</p>
+        <p>Currently I am a student at Haverford College & UPenn GSE.</p>
         <br>
-        <p>I am interested in educational interactions between man & machine and technologies to improve learning outcomes.</p>
+        <p>My interests include creative usage of AI, educational interactions between man & machine, and technologies to improve learning outcomes.</p>
+        <p>
       </div>
     </div>
 
@@ -76,16 +90,16 @@
         <button class="window-close" aria-label="Close">X</button>
       </div>
       <div class="tabs">
-        <button class="tab is-active" data-tab="work">Work</button>
-        <button class="tab" data-tab="research">Research</button>
+        <button class="tab is-active" data-tab="research">Research</button>
+        <button class="tab" data-tab="work">Work</button>
       </div>
-      <div class="window-content" id="tab-work">
+      <div class="window-content" id="tab-work" style="display: none;">
         <div class="entry">
           <div class="entry-img">
             <img src="assets/experience/rokaf.png" alt="ROKAF LOGO">
           </div>
           <div class="entry-body">
-            <div class="entry-date">Oct. 2024 &ndash; Present</div>
+            <div class="entry-date">Oct. 2024 &ndash; July 2026</div>
             <div class="entry-role">Information Security Specialist</div>
             <div class="entry-place">Republic of Korea Air Force</div>
             <ul class="entry-list">
@@ -127,7 +141,21 @@
           </div>
         </div>
       </div>
-      <div class="window-content" id="tab-research" style="display: none;">
+      <div class="window-content" id="tab-research">
+
+        <div class="entry">
+          <div class="entry-img">
+            <img src="assets/experience/PCLA.png" alt="PCLA LOGO">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">July 2024 &ndash; Present</div>
+            <div class="entry-role">Research Assistant</div>
+            <div class="entry-place">Penn Center For Learning Analytics, UPenn GSE</div>
+            <ul class="entry-list">
+              <li class="entry-desc">Finetuning models...</li>
+            </ul>
+          </div>
+        </div>
 
         <div class="entry">
           <div class="entry-img">
@@ -135,7 +163,7 @@
           </div>
           <div class="entry-body">
             <div class="entry-date">Mar. 2024 &ndash; Sept. 2024</div>
-            <div class="entry-role">Undergraduate Research Intern</div>
+            <div class="entry-role">Research Intern</div>
             <div class="entry-place">AIEd Lab, Yonsei University</div>
             <ul class="entry-list">
               <li class="entry-desc">Worked under the guidance of Professor <a href="https://aiedlab.yonsei.ac.kr/about/">Nam Ju Kim</a>.</li>
@@ -151,7 +179,7 @@
           </div>
           <div class="entry-body">
             <div class="entry-date">May 2023 &ndash; Nov. 2023</div>
-            <div class="entry-role">Lead Student Researcher</div>
+            <div class="entry-role">Undergraduate Researcher</div>
             <div class="entry-place">Summer Science Research, Bryn Mawr College</div>
             <ul class="entry-list">
               <li class="entry-desc">Investigated the impact of various deadline policies on student learning and belonging in CS courses
@@ -168,7 +196,7 @@
           </div>
           <div class="entry-body">
             <div class="entry-date">Jan. 2023 &ndash; Aug. 2023</div>
-            <div class="entry-role">NLP Research Engineer</div>
+            <div class="entry-role">NLP Research Assistant</div>
             <div class="entry-place">Grissom Lab, Haverford College</div>
             <ul class="entry-list">
               <li class="entry-desc">Explored the impact of word order for transformer-based Machine Translation models
@@ -190,11 +218,23 @@
       <div class="window-content">
         <div class="entry">
           <div class="entry-img">
+            <img src="assets/experience/upenn.png" alt="upenn logo">
+          </div>
+          <div class="entry-body">
+            <div class="entry-date">2026 &ndash; 2028</div>
+            <div class="entry-role">Masters in Learning Sciences & Technologies</div>
+            <div class="entry-place">UPenn GSE</div>
+            <ul class="entry-list">
+              <li class="entry-desc">Accelerated masters program starting from undergraduate years.</li>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-img">
             <img src="assets/experience/haverford.png" alt="haverford logo">
           </div>
           <div class="entry-body">
             <div class="entry-date">2021 &ndash; 2027</div>
-            <div class="entry-role">B.S. Computer Science</div>
+            <div class="entry-role">Bachelors in Computer Science</div>
             <div class="entry-place">Haverford College</div>
             <ul class="entry-list">
               <li class="entry-desc">GPA: 4.0</li>
@@ -609,19 +649,6 @@
           To make it easier for people to try the website, I made a demo account which users can use without signing up.
           The mobile frontend interface has also improved and the program now goes through e2e testing.
         </p>
-      </div>
-    </div>
-
-    <div class="window" id="window-resume" style="display: none;">
-      <div class="window-header">
-        <span class="window-title">Resume</span>
-        <button class="window-close" aria-label="Close">X</button>
-      </div>
-      <div class="resume-toolbar">
-        <a href="assets/resume.pdf" download class="project-btn">Download PDF</a>
-      </div>
-      <div class="window-content window-content--resume">
-        <iframe src="assets/resume.pdf" title="Resume"></iframe>
       </div>
     </div>
 

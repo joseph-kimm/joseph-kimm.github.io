@@ -221,10 +221,10 @@
 
 // === Photo Carousel ===
 const carouselPhotos = [
-  { src: 'assets/pictures/me-three.png', caption: 'Month Before Military Service, Oct 2024' },
-  { src: 'assets/pictures/me-four.png',  caption: "Daniel's wedding, Feb 2026" },
-  { src: 'assets/pictures/me-five.png',  caption: 'ACM SIGCSE Conference, March 2024' },
-  { src: 'assets/pictures/me-six.png',  caption: 'Cycle Trip Across Korea, Jun 2026' },
+  { src: 'assets/pictures/me-three.webp', caption: 'Month Before Military Service, Oct 2024' },
+  { src: 'assets/pictures/me-four.webp',  caption: "Daniel's wedding, Feb 2026" },
+  { src: 'assets/pictures/me-five.webp',  caption: 'ACM SIGCSE Conference, March 2024' },
+  { src: 'assets/pictures/me-six.webp',  caption: 'Cycle Trip Across Korea, Jun 2026' },
 
 ];
 let carouselIndex = 0;
